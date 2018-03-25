@@ -1,0 +1,11 @@
+﻿  LinkedListIterator.cpp
+c:\users\hp\desktop\cs 204\homework trials\akillioglu_akillioglu_kerem_hw4\akillioglu_akillioglu_kerem_hw4\linkedlistiterator.cpp(132): error C2556: 'const int &LinkedList::operator %(const LinkedList &)': overloaded function differs only by return type from 'const int LinkedList::operator %(const LinkedList &)'
+  c:\users\hp\desktop\cs 204\homework trials\akillioglu_akillioglu_kerem_hw4\akillioglu_akillioglu_kerem_hw4\linkedlistiterator.h(42): note: see declaration of 'LinkedList::operator %'
+c:\users\hp\desktop\cs 204\homework trials\akillioglu_akillioglu_kerem_hw4\akillioglu_akillioglu_kerem_hw4\linkedlistiterator.cpp(131): error C2373: 'LinkedList::operator %': redefinition; different type modifiers
+  c:\users\hp\desktop\cs 204\homework trials\akillioglu_akillioglu_kerem_hw4\akillioglu_akillioglu_kerem_hw4\linkedlistiterator.h(42): note: see declaration of 'LinkedList::operator %'
+  Generating Code...
+  Compiling...
+  akillioglu_akillioglu_kerem_hw4.cpp
+c:\users\hp\desktop\cs 204\homework trials\akillioglu_akillioglu_kerem_hw4\akillioglu_akillioglu_kerem_hw4\akillioglu_akillioglu_kerem_hw4.cpp(13): warning C4101: 'y1': unreferenced local variable
+c:\users\hp\desktop\cs 204\homework trials\akillioglu_akillioglu_kerem_hw4\akillioglu_akillioglu_kerem_hw4\akillioglu_akillioglu_kerem_hw4.cpp(13): warning C4101: 'x1': unreferenced local variable
+  Generating Code...
