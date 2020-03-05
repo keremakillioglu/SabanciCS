@@ -1,0 +1,44 @@
+
+%{
+#ifndef YYSTYPE
+#define YYSTYPE char*
+#endif
+#include "parser.tab.h"
+%} 
+INT 	"-"?[0-9]+
+REAL	("-"[0-9]+"."[0-9]+)|([0-9]*"."[0-9]+)
+STRING	('[^']*')|(["][^"]*["])
+IDENT 	[a-zA-Z_][a-zA-Z_0-9]* 
+
+%% 
+
+in 		return tIN; 
+function 	return tFUNCTION; 
+for 		return tFOR; 
+while		return tWHILE; 
+var 		return tVAR; 
+";" 		return tSEMICOLON; 
+"(" 		return tLPAR; 
+")" 		return tRPAR; 
+"[" 		return tLBRKT; 
+"]" 		return tRBRKT; 
+"<" 		return tLT; 
+">" 		return tGT; 
+"*" 		return tSTAR; 
+"+" 		return tPLUS; 
+"%" 		return tPERCENT; 
+"," 		return tCOMMA; 
+"}" 		return tRBRACE; 
+"{" 		return tLBRACE; 
+"==" 		return tEQCHECK; 
+"=" 		return tEQ; 
+"-" 		return tMINUS; 
+"!" 		return tNOT; 
+{INT}	 	{yylval = malloc(256); sprintf(yylval, "%s", yytext); return tINT;}
+{REAL}		{yylval = malloc(256); sprintf(yylval, "%s", yytext); return tREAL;}
+{STRING} 	{yylval = malloc(255); yytext[yyleng-1] = '\0'; sprintf(yylval, "%s", (yytext+1)); return tSTRING;} 
+{IDENT}	 	{yylval = malloc(256); sprintf(yylval, "%s", yytext); return tIDENT;} 
+[ \t\n]
+.  	 	return yytext[0]; 
+
+%%
